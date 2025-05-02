@@ -1,0 +1,1147 @@
+/* Import font-family from google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* This is universal CSS */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Inter", sans-serif;
+}
+
+
+/* This is for all unordered list */
+
+ul{
+  list-style-type: none;
+}
+
+
+/* This is banner and hero section (start) */
+
+.banner{
+  background: linear-gradient(to top, rgba(0, 52, 101, 0.72), rgba(0, 0, 0, 0)), url('images/banner.png') center/cover no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FFFFFF;
+    position: absolute;
+    width: 80%;
+    top: 2.5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 3.8rem;
+    border-radius: 10px;
+    gap: 1rem;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+li a{
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #262626;
+  font-weight: 400;
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+
+li a:hover {
+  background-color: transparent;
+}
+
+li a::before{
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #0066ff, #00ccff);
+  transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+}
+
+li a:hover::before{
+  width: 100%;
+  left: 0;
+}
+
+a.active{
+    color:#65AEF2 ;
+}
+
+li img{
+    width: 3.8rem;
+    height: 2.5rem;
+    object-fit: cover;
+}
+
+.banner h1{
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-top: 30rem;
+    margin-left: 4rem;
+}
+
+.indicators{
+    width: 4rem;
+    position: absolute;
+    top: 40rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.indicators div{
+    height: 0.5rem;
+    width: 0.5rem;
+    background-color: white;
+    border-radius: 50%;
+}
+
+div.active{
+    background-color: #65AEF2;
+}
+
+/* This is banner and hero section (end) */
+
+
+/* This is booking section (start) */
+
+.booking-section{
+    width: 90%;
+    margin: 4rem auto;
+    background-color:#E9F3F6 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.booking-heading-text{
+    margin: 3rem auto;
+}
+
+.booking-heading-text h3{
+    font-size: 2rem;
+    font-weight: 450;
+    margin-bottom: 0.5rem;
+}
+
+.booking-heading-text p{
+    font-size: 0.9rem;
+    color: #5E5E5E;
+    font-weight: 500;
+}
+
+.booking-details{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 3.5rem;
+}
+
+.booking-details span{
+    font-size: 1rem;
+    font-weight: 550; 
+}
+
+div.date , div.person{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.check-date , .person-details{
+    background-color: #FFFFFF;
+    padding: 1rem 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.person-details img{
+  width: 1.5rem;
+  height: 1.4rem;
+  object-fit: contain;
+}
+
+.person select{
+    border: none;
+    font-size: 1rem;
+    padding: 0 1rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.booking-section button{
+    padding: 0.8rem 2rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #59a9f4;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.booking-section button:hover{
+  background-color: #7cbbf6;
+  transform: translateY(4px)
+
+}
+
+/* This is booking section (end) */
+
+
+/* This is feature section (start) */
+
+.features-section{
+    width: 100%;
+    padding: 2rem 0;
+    background-color: #f3f3f3;
+}
+
+.features{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    width: 90%;
+    margin: 4rem auto;
+    padding: 2rem 1rem;
+}
+
+.rooms{
+    grid-area: 1 / 1 / 3 / 2; 
+}
+
+.dining{
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.conferences-meetings{
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.service-facilities{
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.wedding-package{
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.feature-item{
+    position: relative;
+    overflow: hidden;
+    border-radius: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.feature-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+    
+}
+
+.feature-item:hover img{
+    transform: scale(1.05);
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 4rem;
+    left: 4rem;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    z-index: 100;
+    line-height: 1.6;
+}
+
+/* This is feature section (end) */
+
+
+/* This is special offer section (start) */
+
+.offers{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 5rem 4rem;
+    position: relative;
+    background-color: #FFFFFF;
+}
+
+div.title span{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color:#65AEF2 ;
+}
+
+div.heading span{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+div.paragraph span{
+    font-size: 1.2rem;
+    white-space: wrap;
+    line-height: 1.6;
+}
+
+div.paragraph a{
+  position: absolute;
+  right: 5rem;
+  top: 10rem;
+  text-decoration: none;
+  color: #65AEF2;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.4s;
+  border-radius: 40px;
+}
+
+div.paragraph a:hover{
+  font-size: 1.7rem;
+  background-color: #f3f3f3;
+  color: black;
+}
+
+.offers-card{
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-one{
+  grid-column: 1/2;
+}
+
+.card-two{
+  grid-column: 2/3; 
+}
+
+.card-three{
+  grid-column: 3/4;
+}
+
+div[class ^="card"]{
+  padding: 1rem 1rem 2rem;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 0 60px rgba(0, 52, 101, 0.25);
+  height: auto;
+  cursor: pointer;
+}
+
+.offers-card  img{
+      width: 100%;
+      border-radius: 30px;
+      transition: transform 0.3s ease;
+      height: auto;
+      object-fit: cover;
+}
+
+.offers-card img:hover{
+  transform: scale(1.05);
+}
+
+.type{
+  font-size: 0.8rem;
+  color: #5E5E5E;
+  font-weight: 800;
+  margin: 2rem 0 0 0 ;
+}
+
+.offers-card h4{
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.header-person-number{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.person-number{
+  display: flex;
+  gap: 0.8rem;
+}
+
+.person-number i{
+  font-size: 1.2rem;
+}
+
+.person-number span{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+span.time{
+  font-size: 1rem;
+  color: #1E1E1E;
+  font-weight: 400;
+}
+
+.offers-card p{
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: #5E5E5E;
+}
+
+.offers-card h2{
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* This is special offer section (end) */
+
+
+/* This is footer section (start) */
+
+footer{
+  width: 100%;
+  background-color: #1E1E1E;
+}
+
+.grid-layout{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2rem;
+}
+
+.footer-1{
+  grid-column:1/2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.footer-2{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  grid-column: 2/3;
+  align-items: center;
+  gap: 4rem;
+  margin: 4rem 0;
+} 
+
+.footer-1 h2{
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.email-input-subscribe{
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-1 input{
+    width: 25rem;
+    height: 3.5rem;
+    padding: 1rem 2rem;
+    font-style: italic;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: black;
+    outline: none;
+    border: none;
+    border-radius: 10px 0px 0px 10px ;
+}
+
+.footer-1 button{
+  height: 3.5rem;
+  padding: .5rem ;
+  font-size: 1.2rem;
+  font-weight: 900;
+  background-color: #65AEF2;
+  color: white;
+  border: none;
+  border-radius: 0px 10px 10px 0px;
+  width: 8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer-1 button:hover{
+  background-color: #1364af;
+
+}
+
+.hyper-links{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+}
+
+.hyper-links a{
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.hyper-links ul{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+
+.copyright{
+    width: 28%;
+    margin: 0 auto;
+    border-top: 1px solid #434343;
+    padding: 1.2rem;
+    text-align: center;
+}
+
+.copyright span{
+  color: white;
+  font-size: 1rem;
+}
+
+/* This is footer section (end) */
+
+
+/* Responsive for Mobile devices */
+
+@media (max-device-width : 480px){
+
+/* This is banner and hero section (start) */
+
+  .nav-links li{
+    display: none ;
+  }
+
+.home , .about , .services{
+  display: block !important;
+}
+
+.nav-links{
+  width: 90%;
+  height: 3rem;
+  border-radius: 20px;
+  gap: .2rem;
+  padding: 0.5rem ;
+}
+
+li a {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.banner h1{
+  font-size: 3rem;
+  font-weight: 600;
+  margin-top: 22rem;
+  margin-left: 2rem;
+}
+
+.indicators{
+  width: 3rem;
+  top: 39rem;
+}
+
+.indicators div{
+  height: 0.4rem;
+  width: 0.4rem;
+}
+/* This is banner and hero section (end) */
+
+/* This is booking section (start) */
+
+.booking-section{
+  margin: 3rem auto;
+  gap: 2rem;
+}
+
+.booking-heading-text{
+  margin: 2rem auto;
+}
+
+.booking-heading-text h3{
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.booking-heading-text p{
+  font-size: 0.8rem;
+}
+
+.booking-details{
+  width: 100%;
+  flex-direction: column;
+}
+
+.booking-details span{
+  font-size: 0.8rem;
+}
+
+div.date , div.person{
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.check-date , .person-details{
+  padding: 0.8rem 2rem;
+  gap: .5rem;
+  border-radius: 20px;
+}
+
+.person-details img{
+width: 1rem;
+height: 1rem;
+}
+
+.person select{
+  font-size: 0.8rem;
+  padding: 0 .5rem;
+}
+
+.booking-section button{
+  padding: 0.8rem 2rem;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+/* This is booking section (end) */
+
+/* This is feature section (start) */
+
+.features-section{
+  padding: 1rem 0;
+  margin: 1.5rem auto;
+
+}
+
+.features{
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 1rem;
+  padding: 2rem .5rem;
+}
+
+.rooms{
+  grid-area: 1 / 1 / 2 / 2; 
+}
+
+.dining{
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.conferences-meetings{
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.service-facilities{
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.wedding-package{
+  grid-area: 3 / 1 / 4 / 3;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 4rem;
+  left: 2rem;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  z-index: 100;
+  line-height: 1.2;
+}
+
+/* This is feature section (end) */
+
+/* This is special offer section (start) */
+
+.offers{
+  padding: 3rem 2rem;
+}
+div.title span{
+  font-size: 0.8rem;
+}
+
+div.heading span{
+  font-size: 1.5rem;
+}
+
+.br-tag{
+  display: none;
+}
+
+div.paragraph span{
+  font-size: .7rem;
+  line-height: 1.2;
+}
+
+div.paragraph a{
+right: 1.5rem;
+top: 2.5rem;
+font-size: 0.8rem;
+font-weight: 600;
+}
+
+.offers-card{
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.card-one{
+grid-row: 1/2;
+width: 100%;
+}
+
+.card-two{
+grid-column: 2/3; 
+width: 100%;
+
+}
+
+.card-three{
+grid-column: 3/4;
+width: 100%;
+
+}
+
+div[class ^="card"]{
+gap: 1rem;
+height: auto;
+}
+
+
+.offers-card h2{
+margin-top: 0.8rem;
+}
+
+/* This is special offer section (end) */
+
+
+/* This is footer section (start) */
+
+.grid-layout{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-1{
+  padding: 8rem 1rem;
+  align-items: center;
+  gap: 4rem;
+
+}
+
+
+.footer-1 h2{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.footer-1 input{
+    width: 70%;
+    height: 2rem;
+    padding: .4rem 1rem;
+    font-size: 1rem;
+    margin: 0rem;
+}
+
+.footer-1 button{
+  height: 2rem;
+  padding: .4rem ;
+  font-size: 1rem;
+  width: 30%;
+}
+
+.footer-2{
+  margin: 2rem 0;
+} 
+
+.hyper-links{
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+.hyper-links ul{
+  gap: 1rem;
+}
+
+.copyright{
+    width: 100%;
+    padding: 0.8rem;
+}
+
+.copyright span{
+  font-size: 0.8rem;
+}
+
+/* This is footer section (end) */
+}
+
+/* Responsive for tablet devices */
+
+
+@media screen and (min-width: 480px) and (max-width: 1025px) {
+  /* This is banner and hero section (start) */
+    
+  .nav-links li{
+    display: none ;
+  }
+
+.home , .about , .services , .rooms{
+  display: block !important;
+}
+
+.nav-links{
+  width: 90%;
+  height: 3rem;
+  border-radius: 20px;
+  gap: .5rem;
+  padding: 0.5rem ;
+}
+
+li a {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.banner h1{
+  font-size: 3rem;
+  font-weight: 600;
+  margin-top: 33rem;
+  margin-left: 2rem;
+}
+
+.indicators{
+  width: 2.5rem;
+  top: 43rem;
+}
+
+.indicators div{
+  height: 0.4rem;
+  width: 0.4rem;
+}
+/* This is banner and hero section (end) */
+
+/* This is booking section (start) */
+
+.booking-section{
+  margin: 3rem auto;
+  gap: 2rem;
+}
+
+.booking-heading-text{
+  margin: 2rem auto;
+}
+
+.booking-heading-text h3{
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.booking-heading-text p{
+  font-size: 0.8rem;
+}
+
+.booking-details{
+  width: 100%;
+  flex-direction: column;
+}
+
+.booking-details span{
+  font-size: 0.8rem;
+}
+
+div.date , div.person{
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.check-date , .person-details{
+  padding: 0.8rem 2rem;
+  gap: .5rem;
+  border-radius: 20px;
+}
+
+.person-details img{
+width: 1rem;
+height: 1rem;
+}
+
+.person select{
+  font-size: 0.8rem;
+  padding: 0 .5rem;
+}
+
+.booking-section button{
+  padding: 0.8rem 2rem;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+/* This is booking section (end) */
+
+/* This is feature section (start) */
+
+.features-section{
+  padding: 1rem 0;
+  margin: 1.5rem auto;
+
+}
+
+.features{
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 1rem;
+  padding: 2rem .5rem;
+}
+
+.rooms{
+  grid-area: 1 / 1 / 2 / 2; 
+}
+
+.dining{
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.conferences-meetings{
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.service-facilities{
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.wedding-package{
+  grid-area: 3 / 1 / 4 / 3;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 4rem;
+  left: 2rem;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  z-index: 100;
+  line-height: 1.2;
+}
+
+/* This is feature section (end) */
+
+/* This is special offer section (start) */
+
+.offers{
+  padding: 3rem 2rem;
+}
+div.title span{
+  font-size: 1.5rem;
+}
+
+div.heading span{
+  font-size: 2rem;
+}
+.br-tag{
+  display: none;
+}
+div.paragraph span{
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+div.paragraph a{
+right: 1.5rem;
+top: 2.9rem;
+font-size: 1rem;
+font-weight: 600;
+}
+
+.offers-card{
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 4rem;
+}
+
+.card-one{
+grid-row: 1/2;
+width: 100%;
+}
+
+.card-two{
+grid-column: 2/3; 
+width: 100%;
+
+}
+
+.card-three{
+grid-column: 3/4;
+width: 100%;
+
+}
+
+div[class ^="card"]{
+gap: 1.5rem;
+height: auto;
+}
+
+
+.offers-card h2{
+margin-top: 0.8rem;
+margin-bottom: 1.5rem;
+}
+
+/* This is special offer section (end) */
+
+
+/* This is footer section (start) */
+
+.grid-layout{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-1{
+  padding: 8rem 1rem;
+  align-items: center;
+  gap: 4rem;
+
+}
+
+
+.footer-1 h2{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.footer-1 input{
+    width: 70%;
+    height: 2rem;
+    padding: .4rem 1rem;
+    font-size: 1rem;
+    margin: 0rem;
+}
+
+.footer-1 button{
+  height: 2rem;
+  padding: .4rem ;
+  font-size: 1rem;
+  width: 30%;
+}
+
+.footer-2{
+  margin: 2rem 0;
+} 
+
+.hyper-links{
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+.hyper-links ul{
+  gap: 1rem;
+}
+
+.copyright{
+    width: 100%;
+    padding: 0.8rem;
+}
+
+.copyright span{
+  font-size: 0.8rem;
+}
+
+/* This is footer section (end) */
+
+}
+
