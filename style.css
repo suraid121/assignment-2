@@ -24,7 +24,7 @@ ul{
 
 .banner{
   background: linear-gradient(to top, rgba(0, 52, 101, 0.72), rgba(0, 0, 0, 0)), url('images/banner.png') center/cover no-repeat;
-  height: 100vh;
+  height: 50rem;
   width: 100%;
   position: relative;
 }
@@ -92,14 +92,14 @@ li img{
     color: #FFFFFF;
     font-size: 4rem;
     font-weight: 700;
-    margin-top: 30rem;
+    margin-top: 38rem;
     margin-left: 4rem;
 }
 
 .indicators{
     width: 4rem;
     position: absolute;
-    top: 40rem;
+    top: 48rem;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -596,13 +596,13 @@ li a {
 .banner h1{
   font-size: 3rem;
   font-weight: 600;
-  margin-top: 22rem;
+  margin-top: 35rem;
   margin-left: 2rem;
 }
 
 .indicators{
   width: 3rem;
-  top: 39rem;
+  top: 48rem;
 }
 
 .indicators div{
@@ -885,13 +885,13 @@ li a {
 .banner h1{
   font-size: 3rem;
   font-weight: 600;
-  margin-top: 33rem;
+  margin-top: 38rem;
   margin-left: 2rem;
 }
 
 .indicators{
   width: 2.5rem;
-  top: 43rem;
+  top: 48rem;
 }
 
 .indicators div{
